@@ -1,4 +1,4 @@
-package com.company;
+package baitap;
 
 import java.util.Scanner;
 
