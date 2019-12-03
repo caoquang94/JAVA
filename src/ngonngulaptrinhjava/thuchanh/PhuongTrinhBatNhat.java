@@ -3,14 +3,14 @@ package ngonngulaptrinhjava.thuchanh;
 import java.util.Scanner;
 
 public class PhuongTrinhBatNhat {
-    public static void main(String[] args) {
+    public static void main(String[] args) {System.out.println("Linear Equation Resolver");
+        System.out.println("Given a equation as 'ax + b = 0', please enter constants:");
         Scanner sc = new Scanner (System.in);
                 double a,b,c;
         System.out.print("a :");
         a = sc.nextDouble();
         System.out.print("b :");
-
-    b = sc.nextDouble();
+        b = sc.nextDouble();
         System.out.print("c :");
         c = sc.nextDouble();
 
