@@ -1,9 +1,12 @@
 package OOP_kethua.baitap;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Point {
-   private Float x;
-   private Float y;
-   public static Float[] arr = new Float[2];
+   public Float x;
+   public Float y;
+   public  Float[] arr = new Float[2];
     public Point(){
     }
     public Point(Float x, Float y){
@@ -12,18 +15,22 @@ public class Point {
     }
 
     public Float getX() {
+
         return x;
     }
 
     public void setX(Float x) {
+
         this.x = x;
     }
 
     public Float getY() {
+
         return y;
     }
 
     public void setY(Float y) {
+
         this.y = y;
     }
     public Float[] getXY(){
@@ -33,8 +40,19 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        Point point = new Point();
-        System.out.println("Point : " + point.getXY());
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter x : ");
+        Float x = sc.nextFloat();
+        System.out.println("Enter y : ");
+        Float y = sc.nextFloat();
+        Point point = new Point(x, y);
+        System.out.println("Point : " + Arrays.toString(point.getXY()));
+        System.out.println("Enter xspeed : ");
+        Float xspeed = sc.nextFloat();
+        System.out.println("Enter yspeed : ");
+        Float yspeed = sc.nextFloat();
+        movePoint movepoint = new movePoint(x, y, xspeed,  yspeed);
+        System.out.println(" Point : [" + point.getX() + ", " + point.getY() + "], After add " + movepoint.move());
     }
 }
 class movePoint extends Point{
@@ -70,7 +88,9 @@ class movePoint extends Point{
         arr[1] = yspeed;
         return arr;
     }
-    public Float move(Float x, Float y , Float xspeed, Float yspeed){
-        return xspeed;
+    public String move(){
+        x += xspeed;
+        y += yspeed;
+        return " speed : [" + x+ " ," + y +"]";
     }
 }
