@@ -37,9 +37,9 @@ class StopWatch {
     public static void main(String[] args) {
         StopWatch s = new StopWatch();
         s.start();
-        for (int i=0;i<100000;i++){
-            System.out.println(i);
-        }
+//        for (int i=0;i<10;i++){
+//            System.out.println(i);
+//        }
         Scanner iput = new Scanner(System.in);
 
         String a =iput.nextLine();
