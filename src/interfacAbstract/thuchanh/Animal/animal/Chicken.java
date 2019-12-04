@@ -1,8 +1,15 @@
 package interfacAbstract.thuchanh.Animal.animal;
 
-public class Chicken extends Animal {
+import interfacAbstract.thuchanh.Animal.edible.Edible;
+
+public class Chicken extends Animal implements Edible {
     @Override
     public String makeSound() {
-        return "Chích chích";
+        return "Chicken Chích chích";
+    }
+
+    @Override
+    public String howToEat() {
+        return "could be fired";
     }
 }
