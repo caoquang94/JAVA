@@ -1,8 +1,8 @@
 package interfacAbstract.thuchanh.comparator;
 
 public class Shape {
-    private String color = "green";
-    private boolean filled = true;
+    public String color = "green";
+    public boolean filled = true;
 
     public Shape() {
     }

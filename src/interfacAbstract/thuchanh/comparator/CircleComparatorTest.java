@@ -23,6 +23,7 @@ public class CircleComparatorTest {
             System.out.println(circle);
         }
         for (Circle circle : circles){
+            System.out.println("Size is : " + circle.getArea());
             System.out.println("Resize is : " + circle.resize());
         };
     }

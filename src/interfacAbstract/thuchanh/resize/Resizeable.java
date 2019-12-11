@@ -1,4 +1,4 @@
-package interfacAbstract.thuchanh.comparator;
+package interfacAbstract.thuchanh.resize;
 
 public interface Resizeable {
     double resize();

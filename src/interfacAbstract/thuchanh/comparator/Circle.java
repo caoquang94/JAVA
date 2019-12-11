@@ -1,7 +1,9 @@
 package interfacAbstract.thuchanh.comparator;
 
-public class Circle extends Shape implements Resizeable{
-    private double radius = 1.0;
+import interfacAbstract.thuchanh.resize.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
+    private double radius = 2.0;
 
     public Circle() {
     }
@@ -40,6 +42,7 @@ public class Circle extends Shape implements Resizeable{
     }
     @Override
     public double resize(){
-        return getRadius()*Math.random()* 100;
+
+        return ((getArea()*Math.random()* 100)/100) + getArea();
     }
 }
