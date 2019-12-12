@@ -1,12 +1,35 @@
 package CleanCode.thuchanh.Cylinder;
 
-import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
-
-import static junit.framework.TestCase.assertEquals;
+import java.util.Scanner;
 
 public class Cylinder {
-        public static double getVolume(int radius, int height){
+    public  int radius;
+    public  int height;
+
+    public Cylinder(){}
+
+    public Cylinder(int radius, int height) {
+        this.radius = radius;
+        this.height = height;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public double getVolume(){
             double baseArea = Math.PI * radius * radius;
             double perimeter = 2 * Math.PI  * radius;
             double volume = perimeter * height + 2 * baseArea;
@@ -14,26 +37,14 @@ public class Cylinder {
         }
     }
 class CylinderTest {
-
-    @Test
-    @DisplayName("Testing getVolume(0, 0)")
-    void testGetVolume0And0() {
-        int radius = 0;
-        int height = 0;
-        double expected = 0;
-
-        double result = Cylinder.getVolume(radius, height);
-        assertEquals(expected, result);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int radius = sc.nextInt();
+        System.out.println("Enter radius : ");
+        int height = sc.nextInt();
+        System.out.println("Enter height : ");
+        Cylinder cylinder = new Cylinder(radius,height);
+        System.out.println("Volume is " + cylinder.getVolume());
     }
 
-    @Test
-    @DisplayName("Testing getVolume(1, 2)")
-    void testGetVolume1And2() {
-        int radius = 1;
-        int height = 2;
-        double expected = 18.84955592153876;
-
-        double result = Cylinder.getVolume(radius, height);
-        assertEquals(expected, result);
-    }
 }

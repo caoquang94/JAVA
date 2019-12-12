@@ -12,8 +12,6 @@ public class FizzBuzz {
         this.number = number;
     }
 
-
-
     public FizzBuzz(int number) {
         this.number = number;
     }

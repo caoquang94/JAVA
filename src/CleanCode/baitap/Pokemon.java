@@ -48,5 +48,4 @@ public class Pokemon {
     public String Skill(){
         return "fire";
     }
-
 }
